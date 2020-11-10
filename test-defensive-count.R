@@ -15,6 +15,8 @@ test_that("does the right thing for problematic inputs", {
   # these trigger *informative* error messages
   # (i.e., errors that don't come from <round()>,
   # but from your own input checks, preferably.)
+  expect_warning(count_them(178379.4999999999999999999999999999999), 
+                 "Possible rounding error")
   expect_error(count_them(-1.1))
   expect_error(count_them(c(1.1, 2)))
   expect_error(count_them(NA_real_))
