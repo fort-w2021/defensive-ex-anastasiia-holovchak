@@ -16,3 +16,5 @@ lag <- function(x, n = 1L) {
 
 path_to_lag <- paste0(here::here(), "/defensive-lag-sol.R")
 checklist::checklist(path_to_lag)
+
+testthat::test_file("test-defensive-lag.R")
